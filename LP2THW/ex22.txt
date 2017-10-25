@@ -1,0 +1,18 @@
+print - print an output on the screen
+# - Comment. Anything after a # is ignored by the program / script
++ - plus
+- - minus
+* - multiplication
+/ - divide
+% - modulus command, returns the remainder of a division instead of the answer
+%s - string formatter (string)
+%d - string formatter (integer)
+%r - Use the %r for debugging, since it displays the "raw" data of the variable, but the others are used for displaying to users.
+\n - new line
+\ - escape
+raw_input() - Prompt the user for input
+open() - open a file
+read() - read a file
+truncate() - The method truncate() truncates the file's size. If the optional size argument is present, the file is truncated to (at most) that size..
+write() - writes to a file
+def - define a function
