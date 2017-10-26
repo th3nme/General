@@ -15,7 +15,7 @@ class Engine(object):
     def __init__(self, scene_map, hero):
         self.scene_map = scene_map
         self.hero = hero
-    
+
     def play(self):
         current_scene = self.scene_map.opening_scene()
 
@@ -26,7 +26,7 @@ class Engine(object):
 
 
 class Death(Scene):
-    
+
     quips = [
         "You died. You kinda suck at this.",
         "You died. Such a loser",
@@ -75,7 +75,7 @@ class CentralCorridor(Scene):
         elif action == "tell a joke":
             print "Lucky for you they made you learn Gothon insults in the academy."
             print "You tell the one Gothon joke you know:"
-            print "Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr."
+            print "Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubfr."
             print "The Gothon stops, tries not to laugh, then busts out laughing and can't move."
             print "While he's laughing you run up and shoot him square in the head"
             print "putting him down, then jump through the Weapon Armory door."
@@ -96,7 +96,7 @@ class LaserWeaponArmory(Scene):
         print "wrong 10 times then the lock closes forever and you can't"
         print "get the bomb.  The code is 3 digits."
 
-        code = "%d%d%d" % (randint(1,9), randint(1,9), randint(1,9))
+        code = "%d%d%d" % (randint(1, 9), randint(1, 9), randint(1, 9))
 
         print "You notice something scribbled on the wall near the keypad", code
 
@@ -111,7 +111,7 @@ class LaserWeaponArmory(Scene):
                 break
             print "BZZZZEDDD!"
             guesses += 1
-            
+
 
         if guess == code:
             print "Correct code entered..."
@@ -178,7 +178,7 @@ class EscapePod(Scene):
         print "but you don't have time to look.  There's 5 pods, which one"
         print "do you take?"
 
-        good_pod = randint(1,5)
+        good_pod = randint(1, 5)
         print "Pod #", good_pod, "seems to look less damaged than the others..."
         guess = raw_input("[pod #]> ")
 
@@ -208,7 +208,6 @@ class Win(Scene):
 
 
 class Final(Scene):
-    
     ''' final fight '''
 
     def enter(self, hero):
@@ -227,7 +226,7 @@ class Final(Scene):
 
 
 class Combat(object):
-    
+
     def combat(self, hero, monster):
 
         ''' combat between two roles '''
@@ -322,7 +321,8 @@ class Human(object):
         else:
             percent = float(self.power) / 5.0 + randint(0, 10)
             target.hp = math.floor(target.hp - percent)
-        print "%s attack %s. %s's HP decreased by %d points." % (self.name, target.name, target.name, percent)
+        print "%s attack %s. %s's HP decreased by %d points." % (self.name, target.name, 
+                                                                 target.name, percent)
 
     def defend(self):
         ''' be in the defending state. '''
