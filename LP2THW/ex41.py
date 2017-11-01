@@ -60,7 +60,7 @@ def convert(snippet, phrase):
 
     return results
 
-# Keep going until they hit CTRL-D
+# Keep going until they hit CTRL-C
 try:
     while True:
         snippets = PHRASES.keys()
