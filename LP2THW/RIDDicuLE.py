@@ -16,7 +16,7 @@ class Engine(object):
         self.level_map = level_map
 
     def play(self):
-        currnet_level = self.level_map.opening_level()
+        current_level = self.level_map.opening_level()
         last_level = self.level_map.next_level('rooftop')
 
         while current_level != last_level:
