@@ -108,10 +108,11 @@ class Map(object):
         self.start_level = start_level
 
     def next_level(self, level_name):
-        pass
+        val = Map.levels.get(level_name)
+        return val
 
     def opening_level(self):
-        pass
+        return self.next_level(self.start_level)
 
 def random_riddle():
     
