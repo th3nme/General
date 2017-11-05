@@ -29,13 +29,25 @@ class Engine(object):
 class Basement(Level):
     
     def enter(self):
-        print "You wake up in a basement, head throbbing and unable to remember how you got here."
-        print "Random body parts belonging to at least a dozen people litter the floor."
+        print "=" * 60
+        print "You wake up in a basement, head throbbing and unable to remember"
+        print "how you got here. Random body parts belonging to at least a dozen"
+        print "people litter the floor. You take a closer look at some of the"
+        print "body parts and notice what seems to be a variety of teeth and"
+        print "claw marks. You hear a groaning noise and realise you're not alone."
+        print "You find a person that appears to be severly injured and near death."
+        print "As you approach they start rambling about riddles, short answers and"
+        print "three chances... perhaps this will make sense later. You notice that"
+        print "the only way out is a staircase heading upstairs so you decide to"
+        print "see if there is a way out upstairs."
+        print "=" * 60
+        raw_input("> ")
+        return 'first_floor'
 
 class FirstFloor(Level):
     
     def enter(self):
-        pass
+        print "=" * 60
 
 class SecondFloor(Level):
     
