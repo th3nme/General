@@ -26,6 +26,24 @@ class Engine(object):
         # Be sure to print out the last level
         current_level.enter()
 
+class Death(Level):
+    
+    quips = [
+        "The creature deems your answer to be insufficient and decides to" 
+        "rip your head clean off. Oh No! It appears that you are dead.",
+        "The creature ponders our response briefly but ultimately decides"
+        "that it doesn't like your answer and fly kicks you right in the face."
+        "Your head is instantly parted from your shoulders killing you instantly",
+        "The creature licks its lips and after a brief moment decides that your"
+        "answer is wrong and races towards you and a frightening pace. It tears"
+        "your body limb from limb before chewing your flesh leaving nothing"
+        "but clean bones behind. Guess that means you died!"
+    ]
+
+    def enter(self):
+        print Death.quips[randint(0, len(self.quips)-1)]
+        exit(1)
+
 class Basement(Level):
     
     def enter(self):
@@ -41,7 +59,7 @@ class Basement(Level):
         print "the only way out is a staircase heading upstairs so you decide to"
         print "see if there is a way out upstairs."
         print "=" * 60
-        raw_input("> ")
+        raw_input("'Enter'> ")
         return 'first_floor'
 
 class FirstFloor(Level):
@@ -114,6 +132,7 @@ class Map(object):
         'ninth_floor': NinthFloor(),
         'tenth_floor': TenthFloor(),
         'rooftop': Rooftop(),
+        'death': Death(),
     }
     
     def __init__(self, start_level):
