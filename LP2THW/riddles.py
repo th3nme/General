@@ -1,4 +1,4 @@
-"""Riddles"""
+"""Riddles for RIDDicuLE Game"""
 import random
 
 def random_riddle():
@@ -66,21 +66,37 @@ def random_riddle():
             "egg",
         "Feed me and I live, give me a drink and I die.":
             "fire",
+        "Which word is always spelt incorrectly?":
+            "incorrectly",
     }
+    
+    # Give the player 3 chances to give a correct answer
+    chances_remaining = 3
+    correct_answer_given = False
 
-    error_count = 0
-    while error_count < 3:
-        # Get a random riddle and answer from riddles
+    # Ask random riddle until correct answer or 3 incorrect answers are given 
+    while chances_remaining > 0 and correct_answer_given == False:
+        # Get a random riddle and answer from riddles{}
         question = random.choice(list(riddles.keys()))
         correct_answer = riddles.get(question)
         print "=" * 60
+        # Display the riddle and prompt player for the answer
         print "[Riddle]: %s" % question
         answer = raw_input("[Answer]: ")
-        if answer.lower() == correct_answer.lower():
-            print "correct"
+        # If answer is not correct then ask a new riddle and subtract 1 from chances_remaining
+        if answer.lower() != correct_answer.lower():
+            chances_remaining -= 1
+            print "The creature deems that your answer is either incorrect or too long"
+            print "You now have %s chance(s) left" % chances_remaining
         else:
-            error_count += 1
-            print "That answer is not correct"
-    print "dead"
+            # If answer is correct mark correct answer given as True
+            correct_answer_given = True
+            print "The creature accepts your answer as correct."
+            print "You are allowed to live a little bit longer."
+    # If you player runs out of chances they die or if not they win and move to the next level
+    if chances_remaining == 0:
+        print "You died"
+    else:
+        print "You win"
 
 random_riddle()
