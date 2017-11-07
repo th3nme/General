@@ -161,7 +161,7 @@ class FirstFloor(Level):
         print "in some places. Its pupil-less eyes glow with a dim white luminescence."
         print "In a raspy voice the undead creature tells you that you will be allowed to"
         print "pass if you correctly answer a riddle in 3 attempts. If you fail it will"
-        print "bite you spreading the disease and you too will become undead."
+        print "bite you spreading the disease and you too will become an undead zombie."
         print "=" * 60
         raw_input("'Enter'> ")
         random_riddle()
