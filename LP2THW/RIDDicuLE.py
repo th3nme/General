@@ -169,6 +169,7 @@ class FirstFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The undead zombie steps aside and you take the stairs up to the next floor."
+        raw_input("'Enter'> ")
         return 'second_floor'
 
 class SecondFloor(Level):
@@ -187,6 +188,7 @@ class SecondFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The Basilisk releases its grip, allowing you to go up to the next floor."
+        raw_input("'Enter'> ")
         return 'third_floor'
 
 class ThirdFloor(Level):
@@ -205,6 +207,7 @@ class ThirdFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The dragon roars again in anger but releases you and allows you to move on."
+        raw_input("'Enter'> ")
         return 'fourth_floor'
 
 class FourthFloor(Level):
@@ -221,6 +224,7 @@ class FourthFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The Minotaur lowers its axe and steps aside. You move onto the next floor."
+        raw_input("'Enter'> ")
         return 'fifth_floor'
 
 class FifthFloor(Level):
@@ -237,6 +241,7 @@ class FifthFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The giant spider releases its grip and you fall to the floor as it scurries away."
+        raw_input("'Enter'> ")
         return 'sixth_floor'
 
 class SixthFloor(Level):
@@ -254,6 +259,7 @@ class SixthFloor(Level):
         random_riddle()
         print "The Demon removes the blades from your neck and steps back through the portal"
         print "from whence it came, once again leaving you in an empty room. You proceed at once."
+        raw_input("'Enter'> ")
         return 'seventh_floor'
 
 class SeventhFloor(Level):
@@ -271,6 +277,7 @@ class SeventhFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The vampire releases you, transforms into a bat and flies away unsatisfied."
+        raw_input("'Enter'> ")
         return 'eighth_floor'
 
 class EighthFloor(Level):
@@ -287,6 +294,7 @@ class EighthFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The giant squid releases its grip and allows you to continue."
+        raw_input("'Enter'> ")
         return 'ninth_floor'
 
 class NinthFloor(Level):
@@ -302,6 +310,7 @@ class NinthFloor(Level):
         raw_input("'Enter'> ")
         random_riddle()
         print "The T-Rex decides to be a vegetarian and lets you pass unharmed."
+        raw_input("'Enter'> ")
         return 'tenth_floor'
 
 class TenthFloor(Level):
@@ -320,6 +329,7 @@ class TenthFloor(Level):
         random_riddle()
         print "Godzilla moves aside but you get the feeling this might not be over yet. You head"
         print "upstairs to the rooftop."
+        raw_input("'Enter'> ")
         return 'rooftop'
 
 class Rooftop(Level):
@@ -334,6 +344,7 @@ class Rooftop(Level):
         print "ladder just as Godzilla's jaws snap shut just behind you. The helicopter flies away"
         print "while you climb the rest of the ladder. You collapse exhausted into the cabin and"
         print "shut your eyes knowing that you are safe."
+        raw_input("'Enter'> ")
         print "=" * 80
         print "GAVE OVER YOU WIN!!"
         print "=" * 80
