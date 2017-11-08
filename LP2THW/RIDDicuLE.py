@@ -34,7 +34,7 @@ def random_riddle():
         "Sometimes I walk in front some I walk behind. Is is only in the dark that "
         "I ever leave you":
             "shadow",
-        "I weigh almost nothing but cannot be heald for long.":
+        "I weigh almost nothing but cannot be held for long.":
             "breath",
         "I can be seen in water but I never ge wet.":
             "reflection",
@@ -81,7 +81,7 @@ def random_riddle():
         # Get a random riddle and answer from riddles{}
         question = random.choice(list(riddles.keys()))
         correct_answer = riddles.get(question)
-        print "=" * 60
+        print "=" * 80
         # Display the riddle and prompt player for the answer
         print "[Riddle]: %s" % question
         answer = raw_input("[Answer]: ")
@@ -97,17 +97,20 @@ def random_riddle():
             print "You are allowed to live a little bit longer."
     if chances_remaining == 0:
         deaths = [
-            "The creature deems your answers to be insufficient and decides to"
+            "The creature deems your answers to be insufficient and decides to\n"
             "rip your head clean off. Oh No! It appears that you are dead.",
-            "The creature ponders our response briefly but ultimately decides"
-            "that it doesn't like your answers and fly kicks you right in the face."
+            "The creature ponders our response briefly but ultimately decides\n"
+            "that it doesn't like your answers and fly kicks you right in the face.\n"
             "Your head is parted from your shoulders killing you instantly",
-            "The creature licks its lips and after a brief moment decides that your"
-            "answers are wrong and races towards you and a frightening pace. It tears"
-            "your body limb from limb before chewing your flesh leaving nothing"
+            "The creature licks its lips and after a brief moment decides that your\n"
+            "answers are wrong and races towards you and a frightening pace. It tears\n"
+            "your body limb from limb before chewing your flesh leaving nothing\n"
             "but clean bones behind. Guess that means youe dead!"
         ]
+        print "=" * 80
         print deaths[randint(0, len(deaths)-1)]
+        print "GAME OVER!"
+        print "=" * 80
         exit()
 
 class Level(object):
@@ -136,7 +139,7 @@ class Engine(object):
 class Basement(Level):
     """First level"""
     def enter(self):
-        print "=" * 60
+        print "=" * 80
         print "You wake up in a basement, head throbbing and unable to remember"
         print "how you got here. Random body parts belonging to at least a dozen"
         print "people litter the floor. You take a closer look at some of the"
@@ -146,23 +149,23 @@ class Basement(Level):
         print "As you approach they start rambling about riddles, short answers and"
         print "three chances... perhaps this will make sense later. You notice that"
         print "the only way out is a staircase heading upstairs so you decide to"
-        print "see if there is another way out."
-        print "=" * 60
+        print "see if there is another way out..."
+        print "=" * 80
         raw_input("'Enter'> ")
         return 'first_floor'
 
 class FirstFloor(Level):
     """Undead zombie level"""
     def enter(self):
-        print "=" * 60
+        print "=" * 80
         print "You enter the room and notice the doors leading outside are chained shut."
         print "You hear a scraping noise and turn around. A horrible zombie like creature"
         print "hobbles towards you. Its skin is grey and rotting showing bone and flesh"
         print "in some places. Its pupil-less eyes glow with a dim white luminescence."
         print "In a raspy voice the undead creature tells you that you will be allowed to"
         print "pass if you correctly answer a riddle in 3 attempts. If you fail it will"
-        print "bite you spreading the disease and you too will become an undead zombie."
-        print "=" * 60
+        print "bite you spreading the disease and you too will become an undead zombie..."
+        print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
         print "The undead zombie steps aside and you take the stairs up to the next floor."
@@ -171,69 +174,132 @@ class FirstFloor(Level):
 class SecondFloor(Level):
     """Giant snake level"""
     def enter(self):
-        print "Second floor"
+        print "=" * 80
+        print "You reach the top of the stairs and almost trip over a strange carpet roll."
+        print "After you regain your footing you realise it is infact a discarded Basilisk skin."
+        print "Judging by the size of the discarded skin you estimate the creature at over 20"
+        print "metres long. To back up this fact you hear a feint hissing sound getting nearer."
+        print "As you round a corner you quickly shut your eyes when you remember that looking"
+        print "a Basilisk directly in the eye causes instant death. The Basilisk wraps around"
+        print "you and traps you in place. You try to relax your mind for the next riddle as the"
+        print "Basilisk grips you tighter and tighter..."
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
+        print "The Basilisk releases its grip and allows you to take the stairs up to the next floor."
         return 'third_floor'
 
 class ThirdFloor(Level):
-    """Medusa level"""
+    """Dragon level"""
     def enter(self):
-        print "Third floor"
+        print "=" * 80
+        print "You exit the stairwell and immediately start sweating due to the intense heat"
+        print "permeating the room. You notice various scorth marks on the floor when out of"
+        print "nowhere a large scaly tail smacks into you pinning you up against a wall."
+        print "After being briefly dazed you open your eyes to see the huge gaping maw of"
+        print "of a massive dragon filling your field of view. The dragon unleashes a loud"
+        print "deafening roar right in your face. You feel the intense heat generated by the"
+        print "dragon and realise you will be burnt to a crisp in seconds unless you can give"
+        print "the creature a satisfactory answer..."
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
+        print "The dragon roars again in anger but releases you and allows you to move on."
         return 'fourth_floor'
 
 class FourthFloor(Level):
     """Minotaur level"""
     def enter(self):
-        print "Fourth floor"
+        print "=" * 80
+        print "You enter the next room cautiously scanning for threats. You hear a noise behind"
+        print "you and turn to see a horrible beast, half man half bull charging towards you"
+        print "weilding a massive axe. The Minotaur stops right infront of you and raises the"
+        print "axe threateningly. Judging by its well muscled physique and the crazed look in"
+        print "its eyes you decide that it would not have much difficulty parting your head from"
+        print "your shoulders. The Minotaur backs you into a corner cutting off your escape..."
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
+        print "The Minotaur lowers its axe and steps aside. You move onto the next floor."
         return 'fifth_floor'
 
 class FifthFloor(Level):
     """Giant spider level"""
     def enter(self):
-        print "Fitfh floor"
+        print "=" * 80
+        print "You step through the door and get caught up immediately in something sticky."
+        print "It appears to be some kind of spiders web covering the floor, walls and ceiling."
+        print "Before you can do anything else a pair of long hairs legs grab you around your"
+        print "midsection and lift you towards a pair of giant fangs surrounded by lots of"
+        print "scary looking eyes! The gigantic spider makes a clicking noise with its fangs"
+        print "as if it is about to make a meal out of you..."
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
+        print "The giant spider releases its grip and you fall to the floor as it scurries away."
         return 'sixth_floor'
 
 class SixthFloor(Level):
     """Demon level"""
     def enter(self):
-        print "Sixth floor"
+        print "=" * 80
+        print "You enter the room which strangly, appears to be empty. All of a sudden a portal"
+        print "opens up next to you. Through the portal steps a huge Demon. Red leathery skin,"
+        print "black wings, long pointy tail and large horns. This is truely a creature of"
+        print "nightmares. The Demon summons an enormous blade in each hand, walks over to you"
+        print "and rests the blades on either side of your neck. The slightest movement could"
+        print "end you..."
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
+        print "The Demon removes the blades from your neck and steps back through the portal" 
+        print "from whence it came, once again leaving you in an empty room. You proceed at once."
         return 'seventh_floor'
 
 class SeventhFloor(Level):
     """Dracula level"""
     def enter(self):
+        print "=" * 80
         print "Seventh floor"
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
         return 'eighth_floor'
 
 class EighthFloor(Level):
     """Giant Squid level"""
     def enter(self):
+        print "=" * 80
         print "Eighth floor"
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
         return 'ninth_floor'
 
 class NinthFloor(Level):
     """T-Rex level"""
     def enter(self):
+        print "=" * 80
         print "Ninth floor"
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
         return 'tenth_floor'
 
 class TenthFloor(Level):
     """Godzilla level"""
     def enter(self):
+        print "=" * 80
         print "Tenth floor"
+        print "=" * 80
+        raw_input("'Enter'> ")
         random_riddle()
         return 'rooftop'
 
 class Rooftop(Level):
     """Escape Helicopter level"""
     def enter(self):
+        print "=" * 80
         print "You win"
         exit(0)
 
