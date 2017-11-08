@@ -186,7 +186,7 @@ class SecondFloor(Level):
         print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
-        print "The Basilisk releases its grip and allows you to take the stairs up to the next floor."
+        print "The Basilisk releases its grip, allowing you to go up to the next floor."
         return 'third_floor'
 
 class ThirdFloor(Level):
@@ -252,7 +252,7 @@ class SixthFloor(Level):
         print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
-        print "The Demon removes the blades from your neck and steps back through the portal" 
+        print "The Demon removes the blades from your neck and steps back through the portal"
         print "from whence it came, once again leaving you in an empty room. You proceed at once."
         return 'seventh_floor'
 
@@ -260,47 +260,83 @@ class SeventhFloor(Level):
     """Dracula level"""
     def enter(self):
         print "=" * 80
-        print "Seventh floor"
+        print "You step through the door into a room filled with an eerie unnatural fog. A large"
+        print "black Bat flies at you out of the fog. You raise your hands in defence but realise"
+        print "the bat is no longer there but rather the tall imposing figure of a man. He has"
+        print "pale white skin, and large kanine teeth protruding over the bottom lip. You realise"
+        print "He is a Vampire. Not just any Vampire but Dracula himself! With astonishing speed"
+        print "He traps you in an embrace and extends his fangs over your jugular vein. He seems"
+        print "thirsty..."
         print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
+        print "The vampire releases you, transforms into a bat and flies away unsatisfied."
         return 'eighth_floor'
 
 class EighthFloor(Level):
     """Giant Squid level"""
     def enter(self):
         print "=" * 80
-        print "Eighth floor"
+        print "You enter the room and almost slip over. The entire floor is covered with water."
+        print "There is also a foul stench of rotting fish in the air. Before you have time to"
+        print "do anything a long tentacle covered in suction cups whips out ans grasps you by"
+        print "the leg. Another tentacle grabs you and you are brought within inches of a razor"
+        print "sharp beak. The stench here is unbearable. The giant squid looks at you with a"
+        print "dead expressionless eye..."
         print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
+        print "The giant squid releases its grip and allows you to continue."
         return 'ninth_floor'
 
 class NinthFloor(Level):
     """T-Rex level"""
     def enter(self):
         print "=" * 80
-        print "Ninth floor"
+        print "You exit the stairs into the room and trip over almost straight away. As you stand"
+        print "up you are confronted by a ferocious Tyrannosaurus Rex! It has frightening claws and"
+        print "row upon row of razor sharp teeth. The T-Rex approaches you slowly as if savouring"
+        print "the moment. It clearly expects that you will be its next meal. With one of its"
+        print "powerful legs it pins you to the floor and lets out a loud roar..."
         print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
+        print "The T-Rex decides to be a vegetarian and lets you pass unharmed."
         return 'tenth_floor'
 
 class TenthFloor(Level):
     """Godzilla level"""
     def enter(self):
         print "=" * 80
-        print "Tenth floor"
+        print "You dust yourself off and move to the next floor. You think you must surely be"
+        print "getting close to the rooftop where you might be able to escape. As you enter the"
+        print "next floor you find several large eggs, almost as tall as you are. Whatever laid"
+        print "these eggs must be massive. As if to confirm your suspicion a massive ear splitting"
+        print "roar fills the room. You follow the sound and are horrified to see Godzilla"
+        print "approaching. It looms tall over you and you feel that if you move it might just be"
+        print "the last thing you do..."
         print "=" * 80
         raw_input("'Enter'> ")
         random_riddle()
+        print "Godzilla moves aside but you get the feeling this might not be over yet. You head"
+        print "upstairs to the rooftop."
         return 'rooftop'
 
 class Rooftop(Level):
     """Escape Helicopter level"""
     def enter(self):
         print "=" * 80
-        print "You win"
+        print "You step out onto the roof and see a flare gun on the ground. You pick it up and"
+        print "fire off the flare into the sky. You see a helicopter approaching which fills you"
+        print "with hope. The chopper hovers and drops a rope ladder for you to climb. You start"
+        print "to move towards it but just as you are about to grab the ladder Godzilla bursts up"
+        print "through the floor! You sprint as fast as you can and make a flying leap for the"
+        print "ladder just as Godzilla's jaws snap shut just behind you. The helicopter flies away"
+        print "while you climb the rest of the ladder. You collapse exhausted into the cabin and"
+        print "shut your eyes knowing that you are safe."
+        print "=" * 80
+        print "GAVE OVER YOU WIN!!"
+        print "=" * 80
         exit(0)
 
 class Map(object):
