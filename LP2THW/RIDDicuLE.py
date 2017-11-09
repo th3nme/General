@@ -298,7 +298,7 @@ class EighthFloor(Level):
         return 'ninth_floor'
 
 class NinthFloor(Level):
-    """T-Rex level"""
+    """Tyrannosaurus Rex level"""
     def enter(self):
         print "=" * 80
         print "You exit the stairs into the room and trip over almost straight away. As you stand"
