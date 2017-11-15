@@ -8,6 +8,9 @@ class Sentence(object):
         self.subject = subject[1]
         self.verb = verb[1]
         self.object = obj[1]
+    
+    def to_tuple(self):
+        return (self.subject, self.verb, self.object)
 
 def peek(word_list):
     if word_list:
