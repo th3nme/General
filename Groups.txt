@@ -1,0 +1,33 @@
+
+New-DistributionGroup -Name "G: BaseCase - Accounting" -Alias "g_basecase-Accounting" -Type "Distribution" -OrganizationalUnit "OU=Exchange,OU=Distribution Groups,DC=Certara,DC=com" -MemberDepartRestriction "Closed" -MemberJoinRestriction "Closed"
+Set-DistributionGroup -Identity "G: BaseCase - Accounting" -RequireSenderAuthenticationEnabled $False -EmailAddresses @{Add="Accounting@basecase.com","Accounting@basecase.net"}
+
+Set-ADGroup -Identity "G_ BaseCase - Accounting" -ManagedBy "Domain Admins"
+
+
+
+New-DistributionGroup -Name "G: BaseCase - Alerts" -Alias "g_basecase-alerts" -Type "Distribution" -OrganizationalUnit "OU=Exchange,OU=Distribution Groups,DC=Certara,DC=com" -MemberDepartRestriction "Closed" -MemberJoinRestriction "Closed"
+Set-DistributionGroup -Identity "G: BaseCase - Alerts" -RequireSenderAuthenticationEnabled $False -EmailAddresses @{Add="alerts@basecase.com","alerts@basecase.net"}
+
+Set-ADGroup -Identity "G_ BaseCase - Alerts" -ManagedBy "Domain Admins"
+
+
+
+New-DistributionGroup -Name "G: BaseCase - Berlin" -Alias "g_basecase-berlin" -Type "Distribution" -OrganizationalUnit "OU=Exchange,OU=Distribution Groups,DC=Certara,DC=com" -MemberDepartRestriction "Closed" -MemberJoinRestriction "Closed"
+Set-DistributionGroup -Identity "G: BaseCase - Berlin" -RequireSenderAuthenticationEnabled $False -EmailAddresses @{Add="berlin@basecase.net"}
+
+Set-ADGroup -Identity "G_ BaseCase - Berlin" -ManagedBy "Domain Admins"
+
+
+
+New-DistributionGroup -Name "G: BaseCase - Billing US" -Alias "g_basecase-billing-us" -Type "Distribution" -OrganizationalUnit "OU=Exchange,OU=Distribution Groups,DC=Certara,DC=com" -MemberDepartRestriction "Closed" -MemberJoinRestriction "Closed"
+Set-DistributionGroup -Identity "G: BaseCase - Billing US" -RequireSenderAuthenticationEnabled $False -EmailAddresses @{Add="billing-us@basecase.com","billing-us@basecase.net"}
+
+Set-ADGroup -Identity "G_ BaseCase - Billing US" -ManagedBy "Domain Admins"
+
+
+
+New-DistributionGroup -Name "G: BaseCase - Billing" -Alias "g_basecase-billing" -Type "Distribution" -OrganizationalUnit "OU=Exchange,OU=Distribution Groups,DC=Certara,DC=com" -MemberDepartRestriction "Closed" -MemberJoinRestriction "Closed"
+Set-DistributionGroup -Identity "G: BaseCase - Billing" -RequireSenderAuthenticationEnabled $False -EmailAddresses @{Add="billing@basecase.com","billing@basecase.net"}
+
+Set-ADGroup -Identity "G_ BaseCase - Billing" -ManagedBy "Domain Admins"
