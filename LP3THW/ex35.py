@@ -3,13 +3,9 @@ from sys import exit
 def gold_room():
     print("This rom is full of gold. How much do you take?")
 
-    choice = input("> ")
-    if "0" in choice or "1" in choice:
-        how_much = int(choice)
-    else:
-        dead("No number detected, an explosive goes off nearby and you die in the blast!")
+    choice = int(input("> "))
     
-    if how_much < 50:
+    if choice < 50:
         print("You're level of greed is acceptible. You may keep the gold!")
         exit(0)
     else:
