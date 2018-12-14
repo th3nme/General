@@ -6,8 +6,9 @@ from sys import exit
 # We have a penalty spot kick. The player selects from 3 options and the goalkeeper selects randomly.
 # If there is a match the shot is saved otherwise a goal is scored
 
-# Function for penalty shot randomizer / score keeper
-# second function for goal keeper AI shot randomizer
+# Function for penalty shot randomizer / score keeper game engine
+# function for player spot kick
+# second function for player goal keeper AI shot randomizer
 # seperate functions for goal scored, goal missed, goal saved, goal conceded. 
 # invalid response slipped voer and booted ball into the stands
 # if x shots remaining and score difference is + or - certain amount then exit
