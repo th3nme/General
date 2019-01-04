@@ -35,7 +35,8 @@ def shootout_engine():
         else:
             penalty_defend()
     
-    while player_shots + computer_shots >= 10 and player_score != computer_score and player_shots == computer_shots
+    while player_shots + computer_shots >= 10 
+        if player_score != computer_score and player_shots == computer_shots
 
 
 def penalty_defend():
